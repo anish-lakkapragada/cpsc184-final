@@ -1,0 +1,104 @@
+# 100 consumer-facing brands used to benchmark the trademark pipeline.
+# Last 25 are well-known genericide candidates (Google, Uber, Kleenex, etc).
+# One brand per line. Lines starting with # are ignored.
+
+Nike
+Adidas
+Puma
+Reebok
+Under Armour
+New Balance
+Converse
+Vans
+Crocs
+UGG
+Timberland
+Birkenstock
+Levi's
+Calvin Klein
+Tommy Hilfiger
+Ralph Lauren
+Lacoste
+Lululemon
+Patagonia
+The North Face
+Columbia
+Carhartt
+Supreme
+Off-White
+Yeezy
+Gucci
+Louis Vuitton
+Hermes
+Chanel
+Prada
+Burberry
+Versace
+Dior
+Fendi
+Balenciaga
+Givenchy
+Tiffany
+Cartier
+Pandora
+Swarovski
+Rolex
+Omega
+Tag Heuer
+Patek Philippe
+Audemars Piguet
+Casio
+Apple
+Samsung
+Sony
+Bose
+Beats
+JBL
+Fitbit
+Garmin
+GoPro
+Nintendo
+PlayStation
+Xbox
+Dyson
+Lego
+Funko
+Pokemon
+Disney
+Marvel
+Yeti
+Stanley
+Hydro Flask
+Coca-Cola
+Pepsi
+Red Bull
+DJI
+KitchenAid
+Vitamix
+Le Creuset
+Pyrex
+Google
+Uber
+Xerox
+Kleenex
+Band-Aid
+Velcro
+Frisbee
+Jacuzzi
+Photoshop
+Q-Tip
+Tupperware
+Post-it
+Chapstick
+Thermos
+Sharpie
+Vaseline
+Tabasco
+Tylenol
+Advil
+Zoom
+Venmo
+Tinder
+Slack
+Spam
+Hoover

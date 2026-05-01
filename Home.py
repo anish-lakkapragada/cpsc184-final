@@ -1,11 +1,7 @@
 import streamlit as st
 
-
 st.set_page_config(page_title="Trademark & Genericide Monitor")
-
-
 st.title("Trademark & Genericide Monitor")
-
 
 st.markdown("""
 A rule-based pipeline for two intellectual-property tasks:

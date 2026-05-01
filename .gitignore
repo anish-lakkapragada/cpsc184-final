@@ -9,3 +9,5 @@ secrets.toml
 evaluations/*
 evaluations
 .claude
+.devcontainer
+.streamlit

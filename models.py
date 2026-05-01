@@ -2,9 +2,6 @@ from dataclasses import dataclass, field
 from datetime import datetime
 
 
-
-# data classes for the whole project
-
 @dataclass
 class Listing:
     source: str
@@ -29,13 +26,11 @@ class FlaggedListing:
     reasons: list
 
 
-
 @dataclass
 class TrademarkReport:
     brand: str
     total_scanned: int
     flagged: list = field(default_factory=list)
-
 
 
 @dataclass
@@ -45,7 +40,6 @@ class GenericideReport:
     branded_count: int
     examples_generic: list = field(default_factory=list)
     examples_branded: list = field(default_factory=list)
-
 
     @property
     def ratio(self):
