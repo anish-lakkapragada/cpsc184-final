@@ -18,7 +18,7 @@ def snippet(text, brand, window=140):
         s = "…" + s
     if end < len(text):
         s = s + "…"
-    return re.sub("(?i)" + re.escape(brand), f"**{brand}**", s)
+    return re.sub("(?i)" + re.escape(brand), lambda m: f"**{m.group(0)}**", s)
 
 st.title("Genericide Detection")
 
