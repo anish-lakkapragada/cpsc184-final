@@ -1,7 +1,24 @@
+import re
+
 import streamlit as st
 
 from analysis import genericide
 from data_sources import GENERICIDE_SOURCES
+
+
+def snippet(text, brand, window=140):
+    text = re.sub(r"\s+", " ", text).strip()
+    idx = text.lower().find(brand.lower())
+    if idx < 0:
+        return text[:300]
+    start = max(0, idx - window)
+    end = min(len(text), idx + len(brand) + window)
+    s = text[start:end]
+    if start > 0:
+        s = "…" + s
+    if end < len(text):
+        s = s + "…"
+    return re.sub("(?i)" + re.escape(brand), f"**{brand}**", s)
 
 st.title("Genericide Detection")
 
@@ -43,9 +60,9 @@ if st.button("Run", type="primary", disabled=not brand):
             if report.examples_generic:
                 st.subheader("Generic examples")
                 for m in report.examples_generic:
-                    st.caption(m.text[:300])
+                    st.caption(snippet(m.text, brand))
 
             if report.examples_branded:
                 st.subheader("Branded examples")
                 for m in report.examples_branded:
-                    st.caption(m.text[:300])
+                    st.caption(snippet(m.text, brand))

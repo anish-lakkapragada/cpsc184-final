@@ -1,7 +1,18 @@
+import re
+
 import streamlit as st
 
 from analysis import trademark
 from data_sources import TRADEMARK_SOURCES
+
+
+def highlight(text, terms):
+    out = text
+    for t in terms:
+        if not t:
+            continue
+        out = re.sub("(?i)" + re.escape(t), lambda m: f"**{m.group(0)}**", out)
+    return out
 
 st.title("Trademark Infringement Monitor")
 
@@ -35,6 +46,11 @@ if st.button("Run", type="primary", disabled=not brand):
             st.success("No suspicious listings found!")
         else:
             for f in report.flagged:
+                terms = [brand]
+                for r in f.reasons:
+                    if 'suspicious word: "' in r:
+                        terms.append(r.split('"')[1])
+                title_md = highlight(f.listing.title, terms)
                 with st.container(border=True):
-                    st.markdown(f"**[{f.listing.title}]({f.listing.url})**")
+                    st.caption(f"[{title_md}]({f.listing.url})")
                     st.caption(f"Seller: {f.listing.seller or '—'}  ·  Price: ${f.listing.price}")
