@@ -1,15 +1,17 @@
 import streamlit as st
 
-st.set_page_config(page_title="Trademark & Genericide Monitor")
-st.title("Trademark & Genericide Monitor")
+st.set_page_config(page_title="CPSC 184 Final Project: Trademark & Genericide Monitor 3000")
+st.title("CPSC 184 Final Project")
 
 st.markdown("""
-A rule-based pipeline for two intellectual-property tasks:
+This is my final project for CPSC 184. Please click on one of the following tabs to get started: 
 
-- **Trademark infringement** — scans eBay listings for potential unauthorized
-  uses of a brand name, using fuzzy title matching and seller heuristics.
-- **Genericide detection** — measures how often a brand is used as a generic term
-  vs. as a proper noun across Reddit and Hacker News, using spaCy POS rules.
+- **Trademark infringement**: scans eBay product listings for potential unauthorized
+  uses of a brand name, using fuzzy search and some heuristics 
 
-Pick a page from the sidebar to get started.
+- **Genericide detection**: uses parts-of-speech (PoS) tagging to detect 
+  if a brand name is being used generically. Pulls from Hacker News and Reddit.
+
+Both give "reports" indicating the risk at which a brand name is at risk of trademark infringement 
+or genericide. Thank you!  
 """)
